@@ -39,15 +39,226 @@ class Main_window(QMainWindow, FROM_OPTIONS) :
         QMainWindow.__init__(self)
         self.setupUi(self)
 
-        px = QPixmap("./images/main.png")
-        px = px.scaled(self.size(), Qt.IgnoreAspectRatio)
-        self.back.setPixmap(px)
-
         self.setWindowIcon(QIcon('./images/icon.png'))
 
-        # btns = (self.users_btn, self.hoem_btn, self.trending_btn, self.categories_btn, self.recommend_btn, self.worldwide_btn, self.reco.btn)
+        btns = (self.users_btn, self.home_btn, self.trending_btn, self.categories_btn, self.recommend_btn, self.worldwide_btn, self.reco_btn)
+        for i, btn in enumerate(btns) :
+            btn.clicked.connect(partial(self.stackedWidget.setCurrentIndex, i))
+        
+        self.users.setStyleSheet("background-color : red;")
+        self.users_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
+        self.users_btn.setIcon(QIcon('./images/users_pressed.png'))
+        self.users_btn.clicked.connect(self.users_button_fn)
+        self.home_btn.clicked.connect(self.home_button_fn)
+        self.trending_btn.clicked.connect(self.trending_button_fn)
+        self.recommend_btn.clicked.connect(self.recommend_button_fn)
+        self.categories_btn.clicked.connect(self.categories_button_fn)
+        self.worldwide_btn.clicked.connect(self.worldwide_button_fn)
+        self.reco_btn.clicked.connect(self.reco_button_fn)
+    
+    def users_button_fn(self) :
+        self.users.setStyleSheet("background-color : red;")
+        self.users_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
+        self.users_btn.setIcon(QIcon('./images/users_pressed.png'))
 
+        self.home.setStyleSheet("background-color : transparent;")
+        self.home_label.setStyleSheet("background-color : transparent;")
+        self.home_btn.setIcon(QIcon('./images/home_icon.png'))
 
+        self.trending.setStyleSheet("background-color : transparent;")
+        self.trending_label.setStyleSheet("background-color : transparent;")
+        self.trending_btn.setIcon(QIcon('./images/trending_icon.png'))
+
+        self.categories.setStyleSheet("background-color : transparent;")
+        self.categories_label.setStyleSheet("background-color : transparent;")
+        self.categories_btn.setIcon(QIcon('./images/categories_icon.png'))
+
+        self.recommend.setStyleSheet("background-color : transparent;")
+        self.recommend_label.setStyleSheet("background-color : transparent;")
+        self.recommend_btn.setIcon(QIcon('./images/wifi_icon.png'))
+
+        self.worldwide.setStyleSheet("background-color : transparent;")
+        self.worldwide_label.setStyleSheet("background-color : transparent;")
+        self.worldwide_btn.setIcon(QIcon('./images/global_icon.png'))
+
+        self.reco.setStyleSheet("background-color : transparent;")
+        self.reco_label.setStyleSheet("background-color : transparent;")
+        self.reco_btn.setIcon(QIcon('./images/recommend_icon.png'))
+
+    def home_button_fn(self) :
+        self.users.setStyleSheet("background-color : transparent;")
+        self.users_label.setStyleSheet("background-color : transparent;")
+        self.users_btn.setIcon(QIcon('./images/users_icon.png'))
+
+        self.home.setStyleSheet("background-color : #70ad47;")
+        self.home_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
+        self.home_btn.setIcon(QIcon('./images/home_pressed.png'))
+
+        self.trending.setStyleSheet("background-color : transparent;")
+        self.trending_label.setStyleSheet("background-color : transparent;")
+        self.trending_btn.setIcon(QIcon('./images/trending_icon.png'))
+
+        self.categories.setStyleSheet("background-color : transparent;")
+        self.categories_label.setStyleSheet("background-color : transparent;")
+        self.categories_btn.setIcon(QIcon('./images/categories_icon.png'))
+
+        self.recommend.setStyleSheet("background-color : transparent;")
+        self.recommend_label.setStyleSheet("background-color : transparent;")
+        self.recommend_btn.setIcon(QIcon('./images/wifi_icon.png'))
+
+        self.worldwide.setStyleSheet("background-color : transparent;")
+        self.worldwide_label.setStyleSheet("background-color : transparent;")
+        self.worldwide_btn.setIcon(QIcon('./images/global_icon.png'))
+
+        self.reco.setStyleSheet("background-color : transparent;")
+        self.reco_label.setStyleSheet("background-color : transparent;")
+        self.reco_btn.setIcon(QIcon('./images/recommend_icon.png'))
+    
+    def trending_button_fn(self) :
+        self.users.setStyleSheet("background-color : transparent;")
+        self.users_label.setStyleSheet("background-color : transparent;")
+        self.users_btn.setIcon(QIcon('./images/users_icon.png'))
+
+        self.home.setStyleSheet("background-color : transparent;")
+        self.home_label.setStyleSheet("background-color : transparent;")
+        self.home_btn.setIcon(QIcon('./images/home_icon.png'))
+
+        self.trending.setStyleSheet("background-color : red;")
+        self.trending_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
+        self.trending_btn.setIcon(QIcon('./images/trending_pressed.png'))
+
+        self.categories.setStyleSheet("background-color : transparent;")
+        self.categories_label.setStyleSheet("background-color : transparent;")
+        self.categories_btn.setIcon(QIcon('./images/categories_icon.png'))
+
+        self.recommend.setStyleSheet("background-color : transparent;")
+        self.recommend_label.setStyleSheet("background-color : transparent;")
+        self.recommend_btn.setIcon(QIcon('./images/wifi_icon.png'))
+
+        self.worldwide.setStyleSheet("background-color : transparent;")
+        self.worldwide_label.setStyleSheet("background-color : transparent;")
+        self.worldwide_btn.setIcon(QIcon('./images/global_icon.png'))
+
+        self.reco.setStyleSheet("background-color : transparent;")
+        self.reco_label.setStyleSheet("background-color : transparent;")
+        self.reco_btn.setIcon(QIcon('./images/recommend_icon.png'))
+    
+    def categories_button_fn(self) :
+        self.users.setStyleSheet("background-color : transparent;")
+        self.users_label.setStyleSheet("background-color : transparent;")
+        self.users_btn.setIcon(QIcon('./images/users_icon.png'))
+
+        self.home.setStyleSheet("background-color : transparent;")
+        self.home_label.setStyleSheet("background-color : transparent;")
+        self.home_btn.setIcon(QIcon('./images/home_icon.png'))
+
+        self.trending.setStyleSheet("background-color : transparent;")
+        self.trending_label.setStyleSheet("background-color : transparent;")
+        self.trending_btn.setIcon(QIcon('./images/trending_icon.png'))
+
+        self.categories.setStyleSheet("background-color : #ffc000;")
+        self.categories_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
+        self.categories_btn.setIcon(QIcon('./images/categories_pressed.png'))
+
+        self.recommend.setStyleSheet("background-color : transparent;")
+        self.recommend_label.setStyleSheet("background-color : transparent;")
+        self.recommend_btn.setIcon(QIcon('./images/wifi_icon.png'))
+
+        self.worldwide.setStyleSheet("background-color : transparent;")
+        self.worldwide_label.setStyleSheet("background-color : transparent;")
+        self.worldwide_btn.setIcon(QIcon('./images/global_icon.png'))
+
+        self.reco.setStyleSheet("background-color : transparent;")
+        self.reco_label.setStyleSheet("background-color : transparent;")
+        self.reco_btn.setIcon(QIcon('./images/recommend_icon.png'))
+    
+    def recommend_button_fn(self) :
+        self.users.setStyleSheet("background-color : transparent;")
+        self.users_label.setStyleSheet("background-color : transparent;")
+        self.users_btn.setIcon(QIcon('./images/users_icon.png'))
+
+        self.home.setStyleSheet("background-color : transparent;")
+        self.home_label.setStyleSheet("background-color : transparent;")
+        self.home_btn.setIcon(QIcon('./images/home_icon.png'))
+
+        self.trending.setStyleSheet("background-color : transparent;")
+        self.trending_label.setStyleSheet("background-color : transparent;")
+        self.trending_btn.setIcon(QIcon('./images/trending_icon.png'))
+
+        self.categories.setStyleSheet("background-color : transparent;")
+        self.categories_label.setStyleSheet("background-color : transparent;")
+        self.categories_btn.setIcon(QIcon('./images/categories_icon.png'))
+
+        self.recommend.setStyleSheet("background-color : red;")
+        self.recommend_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
+        self.recommend_btn.setIcon(QIcon('./images/wifi_pressed.png'))
+
+        self.worldwide.setStyleSheet("background-color : transparent;")
+        self.worldwide_label.setStyleSheet("background-color : transparent;")
+        self.worldwide_btn.setIcon(QIcon('./images/global_icon.png'))
+
+        self.reco.setStyleSheet("background-color : transparent;")
+        self.reco_label.setStyleSheet("background-color : transparent;")
+        self.reco_btn.setIcon(QIcon('./images/recommend_icon.png'))
+    
+    def worldwide_button_fn(self) :
+        self.users.setStyleSheet("background-color : transparent;")
+        self.users_label.setStyleSheet("background-color : transparent;")
+        self.users_btn.setIcon(QIcon('./images/users_icon.png'))
+
+        self.home.setStyleSheet("background-color : transparent;")
+        self.home_label.setStyleSheet("background-color : transparent;")
+        self.home_btn.setIcon(QIcon('./images/home_icon.png'))
+
+        self.trending.setStyleSheet("background-color : transparent;")
+        self.trending_label.setStyleSheet("background-color : transparent;")
+        self.trending_btn.setIcon(QIcon('./images/trending_icon.png'))
+
+        self.categories.setStyleSheet("background-color : transparent;")
+        self.categories_label.setStyleSheet("background-color : transparent;")
+        self.categories_btn.setIcon(QIcon('./images/categories_icon.png'))
+
+        self.recommend.setStyleSheet("background-color : transparent;")
+        self.recommend_label.setStyleSheet("background-color : transparent;")
+        self.recommend_btn.setIcon(QIcon('./images/wifi_icon.png'))
+
+        self.worldwide.setStyleSheet("background-color : #2e75b6;")
+        self.worldwide_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
+        self.worldwide_btn.setIcon(QIcon('./images/global_pressed.png'))
+
+        self.reco.setStyleSheet("background-color : transparent;")
+        self.reco_label.setStyleSheet("background-color : transparent;")
+        self.reco_btn.setIcon(QIcon('./images/recommend_icon.png'))
+    
+    def reco_button_fn(self) :
+        self.users.setStyleSheet("background-color : transparent;")
+        self.users_label.setStyleSheet("background-color : transparent;")
+        self.users_btn.setIcon(QIcon('./images/users_icon.png'))
+
+        self.home.setStyleSheet("background-color : transparent;")
+        self.home_label.setStyleSheet("background-color : transparent;")
+        self.home_btn.setIcon(QIcon('./images/home_icon.png'))
+
+        self.trending.setStyleSheet("background-color : transparent;")
+        self.trending_label.setStyleSheet("background-color : transparent;")
+        self.trending_btn.setIcon(QIcon('./images/trending_icon.png'))
+
+        self.categories.setStyleSheet("background-color : transparent;")
+        self.categories_label.setStyleSheet("background-color : transparent;")
+        self.categories_btn.setIcon(QIcon('./images/categories_icon.png'))
+
+        self.recommend.setStyleSheet("background-color : transparent;")
+        self.recommend_label.setStyleSheet("background-color : transparent;")
+        self.recommend_btn.setIcon(QIcon('./images/wifi_icon.png'))
+
+        self.worldwide.setStyleSheet("background-color : transparent;")
+        self.worldwide_label.setStyleSheet("background-color : transparent;")
+        self.worldwide_btn.setIcon(QIcon('./images/global_icon.png'))
+
+        self.reco.setStyleSheet("background-color : #548235;")
+        self.reco_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
+        self.reco_btn.setIcon(QIcon('./images/recommend_pressed.png'))
+    
     def closeEvent(self, event) :
         reply = QMessageBox.question(self, 'Window Close', 'Are you sure you want to close the window?',
                 QMessageBox.Yes | QMessageBox.No, QMessageBox.No)

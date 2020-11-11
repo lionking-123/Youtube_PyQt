@@ -1294,6 +1294,25 @@ ColorButton::disabled {
      <number>0</number>
     </property>
    </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>600</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/splash_back.png</pixmap>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>splash_image</zorder>
+   <zorder>progressBar</zorder>
   </widget>
  </widget>
  <resources/>
