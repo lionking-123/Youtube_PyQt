@@ -29,7 +29,7 @@ class ThreadProgress(QThread) :
         while i < 101 :
             time.sleep(0.1)
             self.mysignal.emit(i)
-            i += 1
+            i += 4
 
 # ============= Main Window Part ==============
 
@@ -113,6 +113,9 @@ class Main_window(QMainWindow, FROM_OPTIONS) :
         self.reco.setStyleSheet("background-color : transparent;")
         self.reco_label.setStyleSheet("background-color : transparent;")
         self.reco_btn.setIcon(QIcon('./images/recommend_icon.png'))
+
+        self.homewidget = self.stackedWidget.currentWidget()
+        self.homewidget.glob_icon.clicked.connect(self.load_glob)
     
     def trending_button_fn(self) :
         self.users.setStyleSheet("background-color : transparent;")
@@ -258,6 +261,10 @@ class Main_window(QMainWindow, FROM_OPTIONS) :
         self.reco.setStyleSheet("background-color : #548235;")
         self.reco_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
         self.reco_btn.setIcon(QIcon('./images/recommend_pressed.png'))
+    
+    def load_glob(self) :
+        self.stackedWidget.setCurrentIndex(5)
+        self.worldwide_button_fn()
     
     def closeEvent(self, event) :
         reply = QMessageBox.question(self, 'Window Close', 'Are you sure you want to close the window?',

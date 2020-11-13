@@ -7,6 +7,8 @@ from PyQt5.uic import loadUiType
 current_dir = os.path.dirname(os.path.abspath(__file__))
 Form, Base = loadUiType(os.path.join(current_dir, "./UI/users.ui"))
 
+# ========== UserWidget Part ==========
+
 class UsersWidget(Base, Form) :
 	def __init__(self, parent = None) :
 		super(self.__class__, self).__init__(parent)
@@ -23,7 +25,9 @@ class UsersWidget(Base, Form) :
 			self.pwdshow_btn.setIcon(QIcon('./images/pwdS.png'))
 			self.password.setEchoMode(QLineEdit.Password)
 			self.confirm.setEchoMode(QLineEdit.Password)
-		
+
+# ========= Manual Part ==========
+
 if __name__ == '__main__':
 	import sys
 	app = QApplication(sys.argv)

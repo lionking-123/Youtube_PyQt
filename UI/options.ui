@@ -1375,7 +1375,7 @@ ColorButton::disabled {
      </rect>
     </property>
     <widget class="UsersWidget" name="userspage"/>
-    <widget class="QWidget" name="Homepage"/>
+    <widget class="HomeWidget" name="Homepage"/>
     <widget class="QWidget" name="trendingpage"/>
     <widget class="QWidget" name="categoriespage"/>
     <widget class="QWidget" name="Recommendpage"/>
@@ -1777,6 +1777,12 @@ QPushButton:pressed{background-color:rgba(255,255,255,40);border:0px;}</string>
   </widget>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>HomeWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">home</header>
+   <container>1</container>
+  </customwidget>
   <customwidget>
    <class>UsersWidget</class>
    <extends>QWidget</extends>
