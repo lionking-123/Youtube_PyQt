@@ -45,7 +45,7 @@ class Main_window(QMainWindow, FROM_OPTIONS) :
         for i, btn in enumerate(btns) :
             btn.clicked.connect(partial(self.stackedWidget.setCurrentIndex, i))
         
-        self.users.setStyleSheet("background-color : red;")
+        self.users.setStyleSheet("background-color : #ffc00f;")
         self.users_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
         self.users_btn.setIcon(QIcon('./images/users_pressed.png'))
         self.users_btn.clicked.connect(self.users_button_fn)
@@ -57,7 +57,7 @@ class Main_window(QMainWindow, FROM_OPTIONS) :
         self.reco_btn.clicked.connect(self.reco_button_fn)
     
     def users_button_fn(self) :
-        self.users.setStyleSheet("background-color : red;")
+        self.users.setStyleSheet("background-color : #ffc00f;")
         self.users_label.setStyleSheet("background-color : rgba(255, 255, 255, 50);")
         self.users_btn.setIcon(QIcon('./images/users_pressed.png'))
 
@@ -145,6 +145,10 @@ class Main_window(QMainWindow, FROM_OPTIONS) :
         self.reco.setStyleSheet("background-color : transparent;")
         self.reco_label.setStyleSheet("background-color : transparent;")
         self.reco_btn.setIcon(QIcon('./images/recommend_icon.png'))
+
+        self.trendWidget = self.stackedWidget.currentWidget()
+        self.trendWidget.glob_icon.clicked.connect(self.load_glob)
+        self.trendWidget.home_icon.clicked.connect(self.load_home)
     
     def categories_button_fn(self) :
         self.users.setStyleSheet("background-color : transparent;")
@@ -263,8 +267,16 @@ class Main_window(QMainWindow, FROM_OPTIONS) :
         self.reco_btn.setIcon(QIcon('./images/recommend_pressed.png'))
     
     def load_glob(self) :
-        self.stackedWidget.setCurrentIndex(5)
-        self.worldwide_button_fn()
+        if self.stackedWidget.currentIndex() == 1 :
+            self.stackedWidget.setCurrentIndex(5)
+            self.worldwide_button_fn()
+            current = self.stackedWidget.currentWidget()
+            current.geo_home.setChecked(True)
+            current.geo_home.setIcon(QIcon('./images/geo_home.png'))
+    
+    def load_home(self) :
+        self.stackedWidget.setCurrentIndex(1)
+        self.home_button_fn()
     
     def closeEvent(self, event) :
         reply = QMessageBox.question(self, 'Window Close', 'Are you sure you want to close the window?',
@@ -343,15 +355,6 @@ class Login(QMainWindow, FROM_MAIN) :
     def keyPressEvent(self, event) :
         if event.key() == Qt.Key_Enter :
             self.lineEdit.setFocus()
-    
-    def closeEvent(self, event) :
-        reply = QMessageBox.question(self, 'Window Close', 'Are you sure you want to close the application?',
-                QMessageBox.Yes | QMessageBox.No, QMessageBox.No)
-        
-        if reply == QMessageBox.Yes :
-            self.close()
-        else :
-            event.ignore()
 
 # ============= Splash part ============
 

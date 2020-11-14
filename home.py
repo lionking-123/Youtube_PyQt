@@ -100,7 +100,7 @@ class HomeWidget(Base, Form) :
 
 	def glob_switcher(self) :
 		if self.glob_button.isChecked() :
-			self.glob_button.setIcon(QIcon('./images/home_switch.png'))
+			self.glob_button.setIcon(QIcon('./images/active_icon.png'))
 			self.glob_icon.setEnabled(True)
 		else :
 			self.glob_button.setIcon(QIcon('./images/inactiver.png'))

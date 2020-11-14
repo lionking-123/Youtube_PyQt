@@ -1376,10 +1376,10 @@ ColorButton::disabled {
     </property>
     <widget class="UsersWidget" name="userspage"/>
     <widget class="HomeWidget" name="Homepage"/>
-    <widget class="QWidget" name="trendingpage"/>
+    <widget class="TrendingWidget" name="trendingpage"/>
     <widget class="QWidget" name="categoriespage"/>
     <widget class="QWidget" name="Recommendpage"/>
-    <widget class="QWidget" name="geopage"/>
+    <widget class="GeoWidget" name="geopage"/>
     <widget class="QWidget" name="analyticspage"/>
     <widget class="QWidget" name="youtubelogin"/>
    </widget>
@@ -1780,13 +1780,25 @@ QPushButton:pressed{background-color:rgba(255,255,255,40);border:0px;}</string>
   <customwidget>
    <class>HomeWidget</class>
    <extends>QWidget</extends>
-   <header location="global">home</header>
+   <header>home</header>
    <container>1</container>
   </customwidget>
   <customwidget>
    <class>UsersWidget</class>
    <extends>QWidget</extends>
    <header>users</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TrendingWidget</class>
+   <extends>QWidget</extends>
+   <header>trending</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>GeoWidget</class>
+   <extends>QWidget</extends>
+   <header location="global">geo</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
