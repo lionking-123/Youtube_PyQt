@@ -84,14 +84,7 @@ class GeoWidget(Base, Form) :
 	def na_switcher(self) :
 		if self.geo_na.isChecked() :
 			self.geo_na.setIcon(QIcon('./images/geo_active.png'))
-			self.NaWidget.setVisible(True) 
-			self.AfWidget.setVisible(False)
-			self.AsWidget.setVisible(False)
-			self.CaWidget.setVisible(False)
-			self.CarWidget.setVisible(False)
-			self.EuWidget.setVisible(False)
-			self.OcWidget.setVisible(False)
-			self.SaWidget.setVisible(False)
+			self.NaWidget.setVisible(True)
 		else :
 			self.geo_na.setIcon(QIcon('./images/geo_off.png'))
 			self.NaWidget.setVisible(False)
@@ -99,14 +92,7 @@ class GeoWidget(Base, Form) :
 	def ca_switcher(self) :
 		if self.geo_ca.isChecked() :
 			self.geo_ca.setIcon(QIcon('./images/geo_active.png'))
-			self.NaWidget.setVisible(False) 
-			self.AfWidget.setVisible(False)
-			self.AsWidget.setVisible(False)
 			self.CaWidget.setVisible(True)
-			self.CarWidget.setVisible(False)
-			self.EuWidget.setVisible(False)
-			self.OcWidget.setVisible(False)
-			self.SaWidget.setVisible(False)
 		else :
 			self.geo_ca.setIcon(QIcon('./images/geo_off.png'))
 			self.CaWidget.setVisible(False)
@@ -114,13 +100,6 @@ class GeoWidget(Base, Form) :
 	def sa_switcher(self) :
 		if self.geo_sa.isChecked() :
 			self.geo_sa.setIcon(QIcon('./images/geo_active.png'))
-			self.NaWidget.setVisible(False) 
-			self.AfWidget.setVisible(False)
-			self.AsWidget.setVisible(False)
-			self.CaWidget.setVisible(False)
-			self.CarWidget.setVisible(False)
-			self.EuWidget.setVisible(False)
-			self.OcWidget.setVisible(False)
 			self.SaWidget.setVisible(True)
 		else :
 			self.geo_sa.setIcon(QIcon('./images/geo_off.png'))
@@ -129,14 +108,7 @@ class GeoWidget(Base, Form) :
 	def oc_switcher(self) :
 		if self.geo_oc.isChecked() :
 			self.geo_oc.setIcon(QIcon('./images/geo_active.png'))
-			self.NaWidget.setVisible(False) 
-			self.AfWidget.setVisible(False)
-			self.AsWidget.setVisible(False)
-			self.CaWidget.setVisible(False)
-			self.CarWidget.setVisible(False)
-			self.EuWidget.setVisible(False)
 			self.OcWidget.setVisible(True)
-			self.SaWidget.setVisible(False)
 		else :
 			self.geo_oc.setIcon(QIcon('./images/geo_off.png'))
 			self.OcWidget.setVisible(False)
@@ -144,14 +116,7 @@ class GeoWidget(Base, Form) :
 	def euro_switcher(self) :
 		if self.geo_euro.isChecked() :
 			self.geo_euro.setIcon(QIcon('./images/geo_active.png'))
-			self.NaWidget.setVisible(False) 
-			self.AfWidget.setVisible(False)
-			self.AsWidget.setVisible(False)
-			self.CaWidget.setVisible(False)
-			self.CarWidget.setVisible(False)
 			self.EuWidget.setVisible(True)
-			self.OcWidget.setVisible(False)
-			self.SaWidget.setVisible(False)
 		else :
 			self.geo_euro.setIcon(QIcon('./images/geo_off.png'))
 			self.EuWidget.setVisible(False)
@@ -159,14 +124,7 @@ class GeoWidget(Base, Form) :
 	def car_switcher(self) :
 		if self.geo_car.isChecked() :
 			self.geo_car.setIcon(QIcon('./images/geo_active.png'))
-			self.NaWidget.setVisible(False) 
-			self.AfWidget.setVisible(False)
-			self.AsWidget.setVisible(False)
-			self.CaWidget.setVisible(False)
 			self.CarWidget.setVisible(True)
-			self.EuWidget.setVisible(False)
-			self.OcWidget.setVisible(False)
-			self.SaWidget.setVisible(False)
 		else :
 			self.geo_car.setIcon(QIcon('./images/geo_off.png'))
 			self.CarWidget.setVisible(False)
@@ -174,14 +132,7 @@ class GeoWidget(Base, Form) :
 	def as_switcher(self) :
 		if self.geo_as.isChecked() :
 			self.geo_as.setIcon(QIcon('./images/geo_active.png'))
-			self.NaWidget.setVisible(False) 
-			self.AfWidget.setVisible(False)
 			self.AsWidget.setVisible(True)
-			self.CaWidget.setVisible(False)
-			self.CarWidget.setVisible(False)
-			self.EuWidget.setVisible(False)
-			self.OcWidget.setVisible(False)
-			self.SaWidget.setVisible(False)
 		else :
 			self.geo_as.setIcon(QIcon('./images/geo_off.png'))
 			self.AsWidget.setVisible(False)
@@ -189,14 +140,7 @@ class GeoWidget(Base, Form) :
 	def af_switcher(self) :
 		if self.geo_af.isChecked() :
 			self.geo_af.setIcon(QIcon('./images/geo_active.png'))
-			self.NaWidget.setVisible(False) 
 			self.AfWidget.setVisible(True)
-			self.AsWidget.setVisible(False)
-			self.CaWidget.setVisible(False)
-			self.CarWidget.setVisible(False)
-			self.EuWidget.setVisible(False)
-			self.OcWidget.setVisible(False)
-			self.SaWidget.setVisible(False)
 		else :
 			self.geo_af.setIcon(QIcon('./images/geo_off.png'))
 			self.AfWidget.setVisible(False)

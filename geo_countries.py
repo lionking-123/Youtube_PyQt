@@ -20,83 +20,33 @@ class GeoCountriesWidget(Base, Form) :
 		self.enabled.clicked.connect(self.enabled_fn)
 		self.disabled.clicked.connect(self.disabled_fn)
 		self.manually.clicked.connect(self.manually_fn)
+		self.listWidget.itemClicked.connect(self.clickevent)
+		self.listWidget.itemDoubleClicked.connect(self.clickeventer)
 		
 	def enabled_fn(self) :
 		self.count=0
 		for index in range(self.listWidget.count()) :
 			self. listWidget.item(index).setIcon(QIcon('./images/enabled_icon.png'))
 
-		self.enabled.setStyleSheet("color: green;background-color:transparent;border:0px;")
-		self.disabled.setStyleSheet("color: rgb(111,131,119);background-color:transparent;border:0px;")
-		self.manually.setStyleSheet("color: rgb(111,131,119);background-color:transparent;border:0px;")
-
-	def disabled_fn(self):
+	def disabled_fn(self) :
 		self.count=0
-		for index in range(self.listWidget.count()):
-			self.listWidget.item(index).setIcon(QIcon('disabled_icon'))
+		for index in range(self.listWidget.count()) :
+			self.listWidget.item(index).setIcon(QIcon('./images/disabled_icon.png'))
 
-		
-		self.disabled.setStyleSheet("color: red;background-color:transparent;border:0px;")
-		self.manually.setStyleSheet("color: rgb(111,131,119);background-color:transparent;border:0px;")
-		self.enabled.setStyleSheet("color: rgb(111,131,119);background-color:transparent;border:0px;")
-
-	def manually_fn(self):
+	def manually_fn(self) :
 		self.count=1
-		for index in range(self.listWidget.count()):
-			self.listWidget.item(index).setIcon(QIcon('manually_icon'))
+		for index in range(self.listWidget.count()) :
+			self.listWidget.item(index).setIcon(QIcon('./images/manually_icon.png'))
 
-		self.listWidget.itemClicked.connect(self.clickevent)
-		self.listWidget.itemDoubleClicked.connect(self.clickeventer)
-		self.manually.setStyleSheet("color: rgb(111,131,119);background-color:transparent;border:0px;")
-		self.enabled.setStyleSheet("color: rgb(111,131,119);background-color:transparent;border:0px;")
-		self.disabled.setStyleSheet("color: rgb(111,131,119);background-color:transparent;border:0px;")
+	def clickevent(self,item) :
+		item.setIcon(QIcon('./images/enabled_icon.png'))
 
+	def clickeventer(self,item) :
+		item.setIcon(QIcon('./images/disabled_icon.png'))
 
-	def clickevent(self,item):
-		item.setIcon(QIcon('enabled_icon'))
-
-	def clickeventer(self,item):
-		item.setIcon(QIcon('disabled_icon'))
-		
-		
-	
-
-
-
-
-
-
-
-	
-
-
-		# if counter==1:
-		# 	item.setIcon(QIcon('enabled_icon'))
-		# elif counter==2:
-		# 	item.setIcon(QIcon('disabled_icon'))
-		# elif counter==3:
-		# 	item.setIcon(QIcon('manually_icon'))
-
-	
-		
-		
-
-
-		
-
-
-
-
-
-
-
-
-
-	    
-
-if __name__ == '__main__':
+if __name__ == '__main__' :
 	import sys
 	app = QApplication(sys.argv)
-	w = EnergyWidget()
+	w = GeoCountriesWidget()
 	w.show()
-	sys.exit(app.exec_())
+	sys.exit(app.exec())

@@ -1308,7 +1308,7 @@ ColorButton::disabled {
      <string notr="true">background-color:transparent; color:white</string>
     </property>
     <property name="text">
-     <string>SOUTH AMERICA</string>
+     <string>South America</string>
     </property>
     <property name="pixmap">
      <pixmap>../Bridge Gang/01 Gade Labs leible.png</pixmap>
@@ -2852,7 +2852,7 @@ ColorButton::disabled {
      <string notr="true">background-color:transparent; color:white</string>
     </property>
     <property name="text">
-     <string>CENTRAL AMERICA</string>
+     <string>Central America</string>
     </property>
     <property name="pixmap">
      <pixmap>../Bridge Gang/01 Gade Labs leible.png</pixmap>
@@ -2907,7 +2907,7 @@ ColorButton::disabled {
      <string notr="true">background-color:transparent; color:white</string>
     </property>
     <property name="text">
-     <string>NORTH AMERICA</string>
+     <string>North America</string>
     </property>
     <property name="pixmap">
      <pixmap>../Bridge Gang/01 Gade Labs leible.png</pixmap>
@@ -2962,7 +2962,7 @@ ColorButton::disabled {
      <string notr="true">background-color:transparent; color:white</string>
     </property>
     <property name="text">
-     <string>OCEANIA</string>
+     <string>Oceania</string>
     </property>
     <property name="pixmap">
      <pixmap>../Bridge Gang/01 Gade Labs leible.png</pixmap>
@@ -3017,7 +3017,7 @@ ColorButton::disabled {
      <string notr="true">background-color:transparent; color:white</string>
     </property>
     <property name="text">
-     <string>EROUPE</string>
+     <string>Europe</string>
     </property>
     <property name="pixmap">
      <pixmap>../Bridge Gang/01 Gade Labs leible.png</pixmap>
@@ -3072,7 +3072,7 @@ ColorButton::disabled {
      <string notr="true">background-color:transparent; color:white</string>
     </property>
     <property name="text">
-     <string>ASIA</string>
+     <string>Asia</string>
     </property>
     <property name="pixmap">
      <pixmap>../Bridge Gang/01 Gade Labs leible.png</pixmap>
@@ -3127,7 +3127,7 @@ ColorButton::disabled {
      <string notr="true">background-color:transparent; color:white</string>
     </property>
     <property name="text">
-     <string>CARIBBEAN</string>
+     <string>Caribbean</string>
     </property>
     <property name="pixmap">
      <pixmap>../Bridge Gang/01 Gade Labs leible.png</pixmap>
@@ -3182,7 +3182,7 @@ ColorButton::disabled {
      <string notr="true">background-color:transparent; color:white</string>
     </property>
     <property name="text">
-     <string>AFRICA</string>
+     <string>Africa</string>
     </property>
     <property name="pixmap">
      <pixmap>../Bridge Gang/01 Gade Labs leible.png</pixmap>

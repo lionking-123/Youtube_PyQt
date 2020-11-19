@@ -1284,7 +1284,7 @@ ColorButton::disabled {
    <widget class="QLabel" name="hms">
     <property name="geometry">
      <rect>
-      <x>635</x>
+      <x>637</x>
       <y>223</y>
       <width>101</width>
       <height>20</height>
@@ -1301,7 +1301,7 @@ ColorButton::disabled {
      <string notr="true">background:transparent; color:black;</string>
     </property>
     <property name="text">
-     <string/>
+     <string>Hr         M          S</string>
     </property>
     <property name="pixmap">
      <pixmap>time.png</pixmap>
@@ -1791,11 +1791,11 @@ p, li { white-space: pre-wrap; }
    <zorder>nitro</zorder>
    <zorder>youtube_enter</zorder>
    <zorder>nitro_btn</zorder>
-   <zorder>hms</zorder>
    <zorder>glob_icon</zorder>
    <zorder>hr_enter</zorder>
    <zorder>min_enter</zorder>
    <zorder>sec_enter</zorder>
+   <zorder>hms</zorder>
   </widget>
  </widget>
  <resources/>
